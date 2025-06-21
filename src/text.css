@@ -1,0 +1,127 @@
+/* General Layout and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: #444;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    transition: background-color 0.3s;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #333;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Multimedia Styling */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.responsive-video {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        text-align: left;
+        margin: 10px 0;
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+}

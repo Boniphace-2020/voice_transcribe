@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f8f8;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+        }
+        #menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            background: #444;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #menu.show {
+            display: flex;
+        }
+        section {
+            padding: 80px 20px 20px;
+            text-align: center;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Luxury Hotel</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav>
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Welcome to Luxury Hotel</h2>
+    <p>Enjoy a comfortable stay with our premium services.</p>
+</section>
+
+<section id="rooms">
+    <h2>Our Rooms</h2>
+    <div>
+        <h3>Deluxe Room</h3>
+        <p>$120 per night</p>
+        <button onclick="bookRoom('Deluxe Room', 120)">Book Now</button>
+    </div>
+    <div>
+        <h3>Suite</h3>
+        <p>$200 per night</p>
+        <button onclick="bookRoom('Suite', 200)">Book Now</button>
+    </div>
+</section>
+
+<section id="booking">
+    <h2>Booking Form</h2>
+    <form onsubmit="confirmBooking(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="room">Room Type:</label>
+        <select id="room">
+            <option>Deluxe Room - $120</option>
+            <option>Suite - $200</option>
+        </select>
+
+        <label for="date">Check-in Date:</label>
+        <input type="date" id="date" required>
+
+        <button type="submit">Book Now</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="sendMessage(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<section id="login">
+    <h2>Login</h2>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Luxury Hotel. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("menu").classList.toggle("show");
+    }
+
+    function bookRoom(roomType, price) {
+        alert(`You have selected ${roomType} for $${price} per night.`);
+    }
+
+    function confirmBooking(event) {
+        event.preventDefault();
+        alert("Booking confirmed! Thank you for choosing Luxury Hotel.");
+    }
+
+    function sendMessage(event) {
+        event.preventDefault();
+        alert("Message sent! We will get back to you soon.");
+    }
+</script>
+</body>
+</html>

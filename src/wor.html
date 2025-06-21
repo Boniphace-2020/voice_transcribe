@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <link rel="stylesheet" href="text.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <h1>My Simple Webpage</h1>
+</header>
+
+<!-- Navigation Menu -->
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<main>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a company that offers great services.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer various services to meet your needs.</p>
+
+        <!-- Multimedia (Image and Video) -->
+        <img src="image.jpg" alt="A sample image" class="responsive-image">
+        <video controls class="responsive-video">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+</main>
+
+<!-- Contact Form Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 My Company. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

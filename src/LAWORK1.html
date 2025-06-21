@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My  Webpage</title>
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+        }
+
+        header {
+          background: pale green;
+          color: pale blue;
+          padding: 1rem;
+          text-align: center;
+        }
+
+        nav {
+          background: #444;<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My  Webpage</title>
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+        }
+
+        header {
+          background: pale green;
+          color: pale blue;
+          padding: 1rem;
+          text-align: center;
+        }
+
+        nav {
+          background: #444;
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        nav a {
+          color: white;
+About
+Services
+Contact
+
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+          background: #666;
+          border-radius: 5px;
+        }
+
+        main {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 2rem;
+          gap: 2rem;
+          justify-content: space-between;
+About
+Services
+Contact
+
+        }
+
+        section {
+          flex: 1 1 45%;
+          padding: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+        }
+
+
+        .contact-form {
+          margin-top: 2rem;
+        }
+
+        .contact-form label {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+          width: 100%;
+          padding: 0.5rem;
+          margin-bottom: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        .contact-form button {
+          background-color: #333;
+          color: white;
+          border: none;
+          padding: 0.7rem 1.2rem;
+          border-radius: 5px;4
+          cursor: pointer;
+          transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+          background-color: #555;
+        }
+
+        img {
+           width: 1000px;
+          height: 500px;
+           display: block;
+
+        }
+
+        video {
+          width: 1400px;
+          height: 700px;
+          display: block;
+        }
+
+        footer {
+          background: #333;
+          color: pale blue;
+          text-align: center;
+          padding: 1rem;
+          margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+          nav {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          main {
+            flex-direction: column;
+          }
+
+          section {
+            flex: 1 1 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>THE LAB TASK</h1>
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+    <section id="about">
+        <h2>About</h2>
+        <p >Here you can learn more about us
+           The  people, and skills – all in short supply in the
+            public sector. For many public organizations,
+            a centralized approach may not be possible
+            because of financial constraints; because
+            staff are too busy on other things; or
+            because no-one has the confidence or capa-
+            bilities to undertake the necessary planning
+            and coordination tasks. The people, and skills – all in short supply in the public sector. For many public organizations, a centralized approach may not be possible because of financial constraints; because staff are too busy on other things; or Sometimes, skills
+            and awareness may be present within the
+            organization, but not in the right place.
+            Centralized approaches require involve-
+            ment of senior staff, yet it is they who are
+            often the last in the public sector to pick up
+            IT or systems skills.
+            Partly related to this is the perception of
+            costs and benefits. The costs of decentralized
+            approaches – of wasted efforts, of organiza-
+            tional inflexibility, of staff time diverted from
+            other activities – are frequently hidden. The
+            benefits, such as managers being able to do
+            what they like, are fairly obvious. For central-
+            ized approaches, by contrast, the equation is
+            often the other way round. The resources
+            needed for the implementation of central- ized approaches require an overt, up-front
+
+            </p>
+        <img src="data:image/jpeg;base64,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">
+    </section>
+
+    <div>
+    <section id="services">
+        <h2>Services</h2>
+        <p>Here we dldescribe the services we offer to our customers
+           <bold>Internet of Things (IoT)</bold>
+               The Internet of Things (IoT) describes a technology whereby physical objects are connected
+            to the Internet and are able to communicate with, and identify themselves to, other devices
+            These devices (sensors, computing devices,smart devices, networking and storage
+            equipment), technologies and the communication between these devices can benefit e-
+            government by providing enough quality data to generate the information required to make
+            the right decisions at the right time.
+            The IoT is important because a physical object that is able to communicate digitally is able to
+            relate not only to a single entity, but also becomes connected to surrounding objects and data
+            infrastructures. This allows for a situation in which many physical objects are able to act in
+            unison, by means of ambient intelligence.</p>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </section>
+    </div>
+    <section id="contact<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My  Webpage</title>
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+        }
+
+        header {
+          background: pale green;
+          color: pale blue;
+          padding: 1rem;
+          text-align: center;
+        }
+
+        nav {
+          background: #444;
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        nav a {
+          color: white;
+About
+Services
+Contact
+
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+          background: #666;
+          border-radius: 5px;
+        }
+
+        main {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 2rem;
+          gap: 2rem;
+          justify-content: space-between;
+About
+Services
+Contact
+
+        }
+
+        section {
+          flex: 1 1 45%;
+          padding: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+        }
+
+
+        .contact-form {
+          margin-top: 2rem;
+        }
+
+        .contact-form label {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+          width: 100%;
+          padding: 0.5rem;
+          margin-bottom: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        .contact-form button {
+          background-color: #333;
+          color: white;
+          border: none;
+          padding: 0.7rem 1.2rem;
+          border-radius: 5px;4
+          cursor: pointer;
+          transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+          background-color: #555;
+        }
+
+        img {
+           width: 1000px;
+          height: 500px;
+           display: block;
+
+        }
+
+        video {
+          width: 1400px;
+          height: 700px;
+          display: block;
+        }
+
+        footer {
+          background: #333;
+          color: pale blue;
+          text-align: center;
+          padding: 1rem;
+          margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+          nav {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          main {
+            flex-direction: column;
+          }
+
+          section {
+            flex: 1 1 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>THE LAB TASK</h1>
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+    <section id="about">
+        <h2>About</h2>
+        <p >Here you can learn more about us
+           The  people, and skills – all in short supply in the
+            public sector. For many public organizations,
+            a centralized approach may not be possible
+            because of financial constraints; because
+            staff are too busy on other things; or
+            because no-one has the confidence or capa-
+            bilities to undertake the necessary planning
+            and coordination tasks. The people, and skills – all in short supply in the public sector. For many public organizations, a centralized approach may not be possible because of financial constraints; because staff are too busy on other things; or Sometimes, skills
+            and awareness may be present within the
+            organization, but not in the right place.
+            Centralized approaches require involve-
+            ment of senior staff, yet it is they who are
+            often the last in the public sector to pick up
+            IT or systems skills.
+            Partly related to this is the perception of
+            costs and benefits. The costs of decentralized
+            approaches – of wasted efforts, of organiza-
+            tional inflexibility, of staff time diverted from
+            other activities – are frequently hidden. The
+            benefits, such as managers being able to do
+            what they like, are fairly obvious. For central-
+            ized approaches, by contrast, the equation is
+            often the other way round. The resources
+            needed for the implementation of central- ized approaches require an overt, up-front
+
+            </p>
+        <img src="data:image/jpeg;base64,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">
+    </section>
+
+    <div>
+    <section id="services">
+        <h2>Services</h2>
+        <p>Here we dldescribe the services we offer to our customers
+           <bold>Internet of Things (IoT)</bold>
+               The Internet of Things (IoT) describes a technology whereby physical objects are connected
+            to the Internet and are able to communicate with, and identify themselves to, other devices
+            These devices (sensors, computing devices,smart devices, networking and storage
+            equipment), technologies and the communication between these devices can benefit e-
+            government by providing enough quality data to generate the information required to make
+            the right decisions at the right time.
+            The IoT is important because a physical object that is able to communicate digitally is able to
+            relate not only to a single entity, but also becomes connected to surrounding objects and data
+            infrastructures. This allows for a situation in which many physical objects are able to act in
+            unison, by means of ambient intelligence.</p>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </section>
+    </div>
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>@20225 The webpage create by Baraka </p>
+</footer>
+</body>
+</html>
+" class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>@20225 The webpage create by Baraka </p>
+</footer>
+</body>
+</html>
+
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        nav a {
+          color: white;
+About
+Services
+Contact
+
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+          background: #666;
+          border-radius: 5px;
+        }
+
+        main {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 2rem;
+          gap: 2rem;
+          justify-content: space-between;
+About
+Services
+Contact
+
+        }
+
+        section {
+          flex: 1 1 45%;
+          padding: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+        }
+
+
+        .contact-form {
+          margin-top: 2rem;
+        }
+
+        .contact-form label {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+          width: 100%;
+          padding: 0.5rem;
+          margin-bottom: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+
+        .contact-form button {
+          background-color: #333;
+          color: white;
+          border: none;
+          padding: 0.7rem 1.2rem;
+          border-radius: 5px;4
+          cursor: pointer;
+          transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+          background-color: #555;
+        }
+
+        img {
+           width: 1000px;
+          height: 500px;
+           display: block;
+
+        }
+
+        video {
+          width: 1400px;
+          height: 700px;
+          display: block;
+        }
+
+        footer {
+          background: #333;
+          color: pale blue;
+          text-align: center;
+          padding: 1rem;
+          margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+          nav {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          main {
+            flex-direction: column;
+          }
+
+          section {
+            flex: 1 1 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>THE LAB TASK</h1>
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+    <section id="about">
+        <h2>About</h2>
+        <p >Here you can learn more about us
+           The  people, and skills – all in short supply in the
+            public sector. For many public organizations,
+            a centralized approach may not be possible
+            because of financial constraints; because
+            staff are too busy on other things; or
+            because no-one has the confidence or capa-
+            bilities to undertake the necessary planning
+            and coordination tasks. The people, and skills – all in short supply in the public sector. For many public organizations, a centralized approach may not be possible because of financial constraints; because staff are too busy on other things; or Sometimes, skills
+            and awareness may be present within the
+            organization, but not in the right place.
+            Centralized approaches require involve-
+            ment of senior staff, yet it is they who are
+            often the last in the public sector to pick up
+            IT or systems skills.
+            Partly related to this is the perception of
+            costs and benefits. The costs of decentralized
+            approaches – of wasted efforts, of organiza-
+            tional inflexibility, of staff time diverted from
+            other activities – are frequently hidden. The
+            benefits, such as managers being able to do
+            what they like, are fairly obvious. For central-
+            ized approaches, by contrast, the equation is
+            often the other way round. The resources
+            needed for the implementation of central- ized approaches require an overt, up-front
+
+            </p>
+        <img src="data:image/jpeg;base64,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">
+    </section>
+
+    <div>
+    <section id="services">
+        <h2>Services</h2>
+        <p>Here we dldescribe the services we offer to our customers
+           <bold>Internet of Things (IoT)</bold>
+               The Internet of Things (IoT) describes a technology whereby physical objects are connected
+            to the Internet and are able to communicate with, and identify themselves to, other devices
+            These devices (sensors, computing devices,smart devices, networking and storage
+            equipment), technologies and the communication between these devices can benefit e-
+            government by providing enough quality data to generate the information required to make
+            the right decisions at the right time.
+            The IoT is important because a physical object that is able to communicate digitally is able to
+            relate not only to a single entity, but also becomes connected to surrounding objects and data
+            infrastructures. This allows for a situation in which many physical objects are able to act in
+            unison, by means of ambient intelligence.</p>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </section>
+    </div>
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>@20225 The webpage create by Baraka </p>
+</footer>
+</body>
+</html>

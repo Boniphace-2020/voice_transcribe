@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form with Image</title>
+    <style>
+        /* CSS for styling the form and image */
+        body {
+          font-family: Arial, sans-serif;
+        }
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+        .form-container {
+          width: 300px;
+          padding: 20px;
+          border: 1px solid #ccc;
+        }
+        .form-group {
+          margin-bottom: 10px;
+        }
+        .form-group label {
+          display: block;
+          margin-bottom: 5px;
+        }
+        .form-group input {
+          width: 100%;
+          padding: 8px;
+        }
+        .image-container {
+          margin-left: 20px;
+        }
+        .image-container img {
+          max-width: 300px;
+          height: auto;
+        }
+        .error {
+          color: red;
+          font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <form id="myForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <div id="nameError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <div id="emailError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="image">Image URL:</label>
+                <input type="text" id="imageURL" name="imageURL">
+                <div id="imageURLError" class="error"></div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="image-container">
+        <img id="displayImage" src="" alt="Image">
+    </div>
+</div>
+
+<script>
+    // JavaScript for form validation and image display
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let imageURL = document.getElementById("imageURL").value;
+      let nameError = document.getElementById("nameError");
+      let emailError = document.getElementById("emailError");
+      let imageURLError = document.getElementById("imageURLError");
+      let displayImage = document.getElementById("displayImage");
+      let isValid = true;
+
+      nameError.textContent = "";
+      emailError.textContent = "";
+      imageURLError.textContent = "";
+
+      if (name.trim() === "") {
+        nameError.textContent = "Name is required";
+        isValid = false;
+      }
+
+      if (email.trim() === "") {
+        emailError.textContent = "Email is required";
+        isValid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        emailError.textContent = "Invalid email format";
+        isValid = false;
+      }
+        if (imageURL.trim() === "") {
+        imageURLError.textContent = "Image URL is required";
+        isValid = false;
+      }
+       else {
+            displayImage.src = imageURL;
+            displayImage.style.display = "block";
+        }
+
+      return isValid;
+    }
+</script>
+
+</body>
+</html>

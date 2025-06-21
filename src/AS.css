@@ -1,0 +1,27 @@
+*{
+margin:0;
+padding:0;
+font-family:'poppins',sans-serif;
+box-sizing:border-box;
+}
+body{
+background:blue;
+}
+.app{
+background:green;
+width:50%;
+max-width:70px;
+margin:100px auto 0;
+border-radius:10px;
+padding: 30%;
+}
+.app{
+font-weight:25px;
+color:grey;
+font-weight:600px;
+border-bottom:1px,solid pink;
+padding-bottom:30px;
+}
+.quiz{
+
+}

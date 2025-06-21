@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SwimSmart Academy - Professional Swimming Lessons for All Ages">
+  <title>SwimSmart Academy</title>
+  <link rel="stylesheet" href="yle.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<header>
+  <nav class="navbar">
+    <div class="logo">Swim School</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Hamburger icon -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#coaches">Coaches</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h2>Learn to Swim with Confidence</h2>
+    <p>Professional swimming lessons for all ages and levels.</p>
+    <button onclick="window.location.href='#registration'">Join Now</button>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+  <h3>About Us</h3>
+  <p>At SwimSmart Academy, we provide safe, fun, and professional swimming instruction for individuals of all ages and skill levels. Our mission is to foster water confidence and swimming excellence in a supportive environment.</p>
+</section>
+
+<!-- Classes Page -->
+<section id="classes" class="section">
+  <h3>Our Classes</h3>
+  <div class="class-list">
+    <div class="class-card">
+      <h4>Beginner</h4>
+      <p>Mon-Wed-Fri, Ages 4-7, $50/week</p>
+    </div>
+    <div class="class-card">
+      <h4>Intermediate</h4>
+      <p>Tue-Thu, Ages 8-12, $60/week</p>
+    </div>
+    <div class="class-card">
+      <h4>Advanced</h4>
+      <p>Weekends, Ages 13+, $70/week</p>
+    </div>
+    <div class="class-card">
+      <h4>Toddler Splash</h4>
+      <p>Mon-Fri, Ages 2-3, $40/week</p>
+    </div>
+  </div>
+</section>
+
+<!-- Registration / Booking Form -->
+<section id="registration" class="section">
+  <h3>Register for a Class</h3>
+  <form class="booking-form">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <select required>
+      <option value="">Select Class</option>
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+      <option>Toddler Splash</option>
+    </select>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<!-- Coaches Page -->
+<section id="coaches" class="section">
+  <h3>Our Coaches</h3>
+  <div class="coach-card">
+    <img src="img_5.png" alt="Coach John">
+    <h4>Coach John</h4>
+    <p>10+ years experience, ASCA Certified</p>
+  </div>
+  <div class="coach-card">
+    <img src="img_6.png" alt="Coach Lisa">
+    <h4>Coach Lisa</h4>
+    <p>Specialist in toddler swimming, CPR Certified</p>
+  </div>
+</section>
+
+<!-- Gallery Page -->
+<section id="gallery" class="section">
+  <h3>Gallery</h3>
+  <div class="gallery-grid">
+    <img src="img_2.png" alt="Kids learning to swim">
+    <img src="img_3.png" alt="Advanced training session">
+    <img src="img_7.png" alt="working space">
+    <img src="img_8.png" alt="working space">
+    <video controls width="600">
+      <source src="Video.MP4" type="video/mp4">
+  </div>
+</section>
+
+<!-- Schedule Page -->
+<section id="schedule" class="section">
+  <h3>Class Schedule</h3>
+  <table>
+    <tr><th>Day</th><th>Beginner</th><th>Intermediate</th><th>Advanced</th><th>Toddler</th></tr>
+    <tr><td>Mon</td><td>10AM</td><td>-</td><td>-</td><td>9AM</td></tr>
+    <tr><td>Tue</td><td>-</td><td>11AM</td><td>-</td><td>-</td></tr>
+    <tr><td>Wed</td><td>10AM</td><td>-</td><td>-</td><td>9AM</td></tr>
+    <tr><td>Thu</td><td>-</td><td>11AM</td><td>-</td><td>-</td></tr>
+    <tr><td>Fri</td><td>10AM</td><td>-</td><td>-</td><td>9AM</td></tr>
+    <tr><td>Sat</td><td>-</td><td>-</td><td>1PM</td><td>-</td></tr>
+    <tr><td>Sun</td><td>-</td><td>-</td><td>1PM</td><td>-</td></tr>
+  </table>
+</section>
+
+<!-- Contact Page -->
+<section id="contact" class="section">
+  <h3>Contact Us</h3>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <div class="contact-info">
+    <p><strong>Phone:</strong> (123) 456-7890</p>
+    <p><strong>Email:</strong> info@swimsmart.com</p>
+    <p><strong>Address:</strong> 123 Water Lane, Ocean City</p>
+    <iframe src="https://www.google.com/maps/embed?..." width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 SwimSmart Academy | Designed by You</p>
+</footer>
+
+<script src="yle.js"></script>
+</body>
+</html>

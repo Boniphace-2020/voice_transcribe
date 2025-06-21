@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A App</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #questions { margin-top: 20px; }
+        .question { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<h2>Ask a Question</h2>
+<input type="text" id="questionInput" placeholder="Type your question...">
+<button onclick="submitQuestion()">Submit</button>
+
+<h2>Questions & Answers</h2>
+<div id="questions"></div>
+
+<script>
+    async function submitQuestion() {
+        const question = document.getElementById("questionInput").value;
+        if (!question) return alert("Please enter a question.");
+
+        const response = await fetch("/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question })
+        });
+
+        document.getElementById("questionInput").value = "";
+        loadQuestions();
+    }
+
+    async function loadQuestions() {
+        const response = await fetch("/questions");
+        const data = await response.json();
+        document.getElementById("questions").innerHTML = data.map(q =>
+            `<div class="question"><b>Q:</b> ${q.question} <br> <b>A:</b> ${q.answer || "Pending..."}</div>`
+        ).join("");
+    }
+
+    loadQuestions(); // Load questions on page load
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Detector</title>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          $("textarea").focus(function() {
+            $(this).css("background-color", "#f2f2f2");
+          });
+          $("textarea").blur(function() {
+            $(this).css("background-color", "#ffffff");
+          });
+        });
+    </script>
+    <link rel="stylesheet"href="emoji.css"></style>
+</head>
+
+<body>
+<ul class="sidenav">
+</ul>
+
+<div class="content">
+    <h2>Error Detector</h2>
+
+    <div class="container">
+        <section>
+            <p>This detector is designed primarily for writers of scientific articles, particularly the fields of information and computer science. Use a generic grammar detector first (e.g. <a href="https://www.grammarly.com/grammar-check">Grammarly</a> ). This detector is coded to find mistakes that occur in a corpus of computer and information science research articles. If you would like to see how this tool works, click <a href="https://youtu.be/IPIqmDPWbc8">one-minute tutorial</a>.</p>
+        </section>
+    </div>
+
+    <div class="wrapper">
+
+
+        <button class="button1" onclick="changeToggleAccuracy()"  onmouseover="mouseover1();" onmouseout="mouseout();">Accuracy</button>
+        <button class="button2" onclick="changeToggleBrevity(document.f1.sstextbox.value,0,100)" onmouseover="mouseover2();" onmouseout="mouseout();">Brevity</button>
+        <button class="button3" onclick="changeToggleClarity(document.f1.sstextbox.value,0,100)" onmouseover="mouseover3();" onmouseout="mouseout();">Clarity</button>
+        <button class="button4" onclick="changeToggleObjectivity(document.f1.sstextbox.value,0,100)" onmouseover="mouseover4();" onmouseout="mouseout();">Objectivity</button>
+        <button class="button5" onclick="changeToggleFormality(document.f1.sstextbox.value,0,100)" onmouseover="mouseover5();" onmouseout="mouseout();">Formality</button>
+
+    </div>
+    <p class="out" id="intro" rows="8" style="width: 80%;"></p>
+    <form id="f1" name="f1">
+        <p><textarea cols="50" name="sstextbox"  rows="8" style="width: 80%;" wrap="soft" placeholder="Paste text here and click button." onkeyup="textChange()" ></textarea></form>
+
+    </form>
+    <p id="introduction"></p>
+    <p id="output"></p>
+    <p id="output1" ></p>
+    <p id="output2" ></p>
+    <p id="output3" ></p>
+    <div style="text-align: left">
+        <div class="largefloating-box">
+            <p><strong>Accuracy detector </strong></p>
+            <i class="em em-owl"></i> <b>A1</b> <a href="https://youtu.be/IPIqmDPWbc8">Factual errors</a>
+            <i class="em em-owl"></i> <b>A2</b> <a href="https://youtu.be/IPIqmDPWbc8">Overgeneralization errors</a>
+            <i class="em em-owl"></i> <b>A3</b> <a href="https://youtu.be/IPIqmDPWbc8">Overly bold claims</a>
+            <i class="em em-owl"></i> <b>A4</b> <a href="https://youtu.be/IPIqmDPWbc8">Numerical or statistical errors</a>
+            <i class="em em-owl"></i> <b>A5</b> <a href="https://youtu.be/IPIqmDPWbc8">Numerous grammatical, lexical and spelling errors</a>
+            <p> <strong>Brevity detector</strong></p>
+            <i class="em em-busts_in_silhouette"></i> <b>B1</b> <a href="https://youtu.be/IPIqmDPWbc8">Multiple vague words</a>
+            <i class="em em-busts_in_silhouette"></i> <b>B2</b> <a href="https://youtu.be/IPIqmDPWbc8">Repetition</a>
+            <i class="em em-busts_in_silhouette"></i> <b>B3</b> <a href="https://youtu.be/IPIqmDPWbc8">Redundancy</a>
+            <p><strong>Clarity detector</strong></p>
+            <i class="em em-radio_button"></i> <b>C1</b>  <a href="https://youtu.be/IPIqmDPWbc8">Vague terms</a>
+            <i class="em em-radio_button"></i> <b>C2</b> <a href="https://youtu.be/IPIqmDPWbc8">Ambiguous terms</a>
+            <i class="em em-radio_button"></i> <b>C3</b>  <a href="https://youtu.be/IPIqmDPWbc8">Ambiguous references</a>
+            <i class="em em-radio_button"></i> <b>C4</b>  <a href="https://youtu.be/IPIqmDPWbc8">Ambiguous syntax</a>
+            <i class="em em-radio_button"></i> <b>C5</b>  <a href="https://youtu.be/IPIqmDPWbc8">Garden-path sentences</a>
+            <p><strong>Objectivity detector</strong></p>
+            <i class="em em-grinning_face_with_one_large_and_one_small_eye"></i> <b>O1</b> <a href="https://youtu.be/IPIqmDPWbc8">Feeling/People focus</a>
+            <i class="em em-grinning_face_with_one_large_and_one_small_eye"></i> <b>O2</b> <a href="https://youtu.be/IPIqmDPWbc8">Emotive</a>
+            <i class="em em-grinning_face_with_one_large_and_one_small_eye"></i></i> <b>O3</b> <a href="https://youtu.be/IPIqmDPWbc8">Excessive personalisation</a>
+            <p><strong>Formality detector</strong></p>
+            <i class="em em-beer"></i> <b>F1</b> <a href="https://youtu.be/IPIqmDPWbc8">Contraction using apostrophes</a>
+            <i class="em em-beer"></i> <b>F2</b> <a href="https://youtu.be/IPIqmDPWbc8">Abbreviation issues</a>
+            <i class="em em-beer"></i> <b>F3</b> <a href="https://youtu.be/IPIqmDPWbc8">Slang</a>
+            <i class="em em-beer"></i> <b>F4</b> <a href="https://youtu.be/IPIqmDPWbc8">Informal quantifiers adverbs, format and linking</a>
+            <i class="em em-beer"></i> <b>F5</b> <a href="https://youtu.be/IPIqmDPWbc8">Rhetorical questions</a>
+        </div>
+        <p><strong>Test items for accuracy</strong>:A5 Noun phrases: uncountable nouns e.g. accommodations, clothings, furnitures, homeworks, informations, knowledges, lightnings, luggages, musics, publics, researches, slangs, trainings, transportations, works); irregular plural nouns +..s, (e.g. datas, each data, two data); determiners and quantifiers, such as one of the + plural, each + plural (e.g. each features), a hour, another + plural (e.g. another articles), much + plural (e.g. much helps), many + no plural (e.g. many time); Prepositional phrases: despite followed by clause (e.g. despite there is a problem); A5 Verb phrases: Intransitive verbs (e.g. be occurred, be happened, There happened, There occurred), improbable combinations (was did, I am belonging, modal verbs followed by -ed (e.g. may worked), can to);A5 Linking: moreover, errant comma before although, Also ; A5 averagely, more + ...er (e.g. more quicker); this paper concludes that, if ;A5 Accidentally repeated words (e.g. and and); A5 Collocation - independent mutually, as follow ; A5 Part of speech errors: (e.g. I analysis, They analysis, I am belong); A5 Careless spelling mistakes (e.g. seve, mesured, randam)</p>
+        <p><strong>Test items for brevity</strong>: and so on, and so forth, etc, etcetera, such as in day by day, little by little, step by step,discuss about, each and every, general public, I think, I do not think, join together, see it with your eyes</p>
+        <p><strong>Test items for clarity</strong>: thing, something, someone, somebody, you, researchers say, it is said that, a very long timegood, bad, nice, really, get, got, gotten, you, your, yours, he, she, they, them</p>
+        <p><strong>Test items for objectivity</strong>: excellent, perfect, fabulous, fantastic, at last, eventually, unfortunately, you, your, yourself</p>
+        <p><strong>Test items for formality</strong>: it's, undefined abbreviations, some phrasal verbs like kicked out, lots of, a lot of, plenty of, really, right after, straight after, right before, yet (e.g. has not been completed yet) straight before, Japanese font apostrophe (e.g didn`t), And, So, But</p>
+
+        <p>with thanks to Andy Morrall (Hong Kong Polytechnic University) for the initial inspiration to use regex and the use of his script as a base for this project and to <a href="https://github.com/afeld">Aden Feldman</a> for creating the emoticons.</p>
+
+        <footer>
+
+            Hilbow, having left the unmarked exam papers for his class in a taxi, makes a class announcement: "You all did really badly on that last exam, so I am giving you another chance. Don`t tell anyone about it otherwise I am toast." And with that twist of
+            the truth, Hilbow not only gets away with losing the papers but his students are delighted to get a second chance!
+        </footer>
+        <script src="mak.js"></script>
+
+</body>
+</html>

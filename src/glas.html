@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Management System</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #3498db; /* Blue background color */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .form-section {
+        width: 50%;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+    }
+
+    .form-section h2 {
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .form-section label {
+        color: white;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-section input, .form-section button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .form-section input {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .form-section button {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+    }
+
+    .form-section button:hover {
+        background-color: #45a049;
+    }
+
+    .admin-dashboard {
+        width: 50%;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        color: white;
+        overflow-y: auto;
+    }
+
+    .admin-dashboard h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .admin-dashboard table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .admin-dashboard th, .admin-dashboard td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    .admin-dashboard th {
+        background-color: #333;
+    }
+
+    .admin-dashboard tr:nth-child(even) {
+        background-color: #444;
+    }
+
+    .admin-dashboard tr:hover {
+        background-color: #555;
+    }
+
+    .admin-dashboard .no-students {
+        text-align: center;
+        color: #ccc;
+        font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="form-section">
+    <h2>Student Registration</h2>
+    <form id="studentForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label for="course">Course</label>
+      <input type="text" id="course" required>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <div class="admin-dashboard">
+    <h2>Admin Dashboard</h2>
+    <table id="studentTable">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Course</th>
+      </tr>
+      </thead>
+      <tbody id="studentList">
+      <tr class="no-students">
+        <td colspan="3">No students registered yet.</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  const studentForm = document.getElementById('studentForm');
+  const studentTable = document.getElementById('studentTable');
+  const studentList = document.getElementById('studentList');
+
+  let students = [];
+
+  studentForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const course = document.getElementById('course').value;
+
+      const student = {
+          name: name,
+          email: email,
+          course: course
+      };
+
+      students.push(student);
+      displayStudents();
+
+      studentForm.reset();
+  });
+
+  function displayStudents() {
+      studentList.innerHTML = '';
+
+      if (students.length === 0) {
+          studentList.innerHTML = '<tr class="no-students"><td colspan="3">No students registered yet.</td></tr>';
+      } else {
+          students.forEach((student, index) => {
+              const row = document.createElement('tr');
+              row.innerHTML = `
+                  <td>${student.name}</td>
+                  <td>${student.email}</td>
+                  <td>${student.course}</td>
+              `;
+              studentList.appendChild(row);
+          });
+      }
+  }
+</script>
+</body>
+</html>

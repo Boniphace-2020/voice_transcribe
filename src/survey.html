@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Survey Form by company">
+  <meta name="keywords" content="Survey, Form, Web Development">
+  <meta name="author" content="john">
+  <title>Survey | [Your Name]</title>
+  <link rel="stylesheet" href="gram.css">
+  <script defer src="long.js"></script>
+</head>
+<body>
+<header>
+  <nav>
+    <ul class="nav-bar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="survey.html" class="active">Survey</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h1>Survey</h1>
+    <form id="survey-form" action="#" method="post">
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required></br>
+
+      <label for="gender">Gender:</label>
+      <input type="radio" name="gender" value="Male" required> Male
+      <input type="radio" name="gender" value="Female" required> Female</br>
+
+      <label for="interests">Interests:</label>
+      <input type="checkbox" name="interests" value="Coding"> Coding
+      <input type="checkbox" name="interests" value="Design"> Design</br>
+
+      <label for="feedback">Feedback:</label>
+      <textarea name="feedback" id="feedback" required></textarea></br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+</footer>
+</body>
+</html>

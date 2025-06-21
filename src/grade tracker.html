@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Grade Tracker</title>
+    <link rel="stylesheet" type="text/css" href="grade.css">
+</head>
+<body>
+<div class="container">
+    <h1>Student Grade Tracker</h1>
+    <form id="addStudentForm">
+        <input type="text" id="nameInput" placeholder="Student Name">
+        <input type="text" id="idInput" placeholder="Student ID">
+        <button type="submit">Add Student</button>
+    </form>
+    <h2>Record Grades</h2>
+    <form id="recordGradesForm">
+        <select id="studentSelect"></select>
+        <input type="text" id="subjectInput" placeholder="Subject">
+        <input type="number" id="gradeInput" placeholder="Grade">
+        <button type="submit">Record Grade</button>
+    </form>
+    <h2>Student Performance</h2>
+    <div id="performanceContainer"></div>
+</div>
+
+<script src="grade.js"></script>
+</body>
+</html>

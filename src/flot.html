@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #a8f0b6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            display: flex;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 800px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-section {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .login-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-section input[type="email"],
+        .login-section input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-section button {
+            width: 100%;
+            padding: 10px;
+            background-color: #006644;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-section button:hover {
+            background-color: #004d33;
+        }
+
+        .login-section .or {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .login-section .google-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .image-section {
+            flex: 1;
+            background: url('https://images.unsplash.com/photo-1584466991158-e4f0c9dcfb29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .image-section .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 0px;
+            border-radius: 3px;
+        }
+
+        .floating-button {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <figcaption>hello</figcaption>
+</head>
+<body>
+<div class="container">
+    <div class="login-section">
+        <h2>Welcome</h2>
+        <p>Sign in to continue</p>
+        <input type="email" placeholder="Email address">
+        <input type="password" placeholder="Password">
+        <button type="button">Sign in</button>
+        <div class="or">or</div>
+        <div class="google-btn">Sign in with Google</div>
+    </div>
+    <img src="img_1.png" alt="water">
+    <div class="image-section">
+        <div class="caption">
+            <h4>Health & Inner Peace</h4>
+            <p>Join us for mindful yoga sessions to refresh your mind and body.</p>
+        </div>
+    </div>
+</div>
+<button class="floating-button">👍</button>
+</body>
+</html>

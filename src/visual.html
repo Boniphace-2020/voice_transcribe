@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="sy.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>School Management System</h1>
+
+    <!-- Registration Form -->
+    <div id="registrationForm" class="form-container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="username" placeholder="Enter username" required><br><br>
+            <input type="password" id="password" placeholder="Enter password" required><br><br>
+            <input type="password" id="confirmPassword" placeholder="Confirm password" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="javascript:void(0);" onclick="showLogin()">Login here</a></p>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="form-container" style="display:none;">
+        <h2>Login</h2>
+        <form id="login Form">
+            <input type="text" id="loginUsername" placeholder="Enter username" required><br><br>
+            <input type="password" id="loginPassword" placeholder="Enter password" required><br><br>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="javascript:void(0);" onclick="showRegister()">Register here</a></p>
+    </div>
+
+    <!-- Dashboard with Bar Graph -->
+    <div id="dashboard" class="form-container" style="display:none;">
+        <h2>Student Performance Data</h2>
+        <canvas id="studentPerformanceChart" width="400" height="200"></canvas>
+        <button onclick="logOut()">Log Out</button>
+    </div>
+</div>
+
+<script src="scpt.js"></script>
+</body>
+</html>
